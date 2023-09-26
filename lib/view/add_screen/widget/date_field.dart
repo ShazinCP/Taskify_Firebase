@@ -4,7 +4,7 @@ import 'package:taskify/constants/constants.dart';
 import 'package:taskify/controller/addscreen_provider.dart';
 import 'package:taskify/helper/colors.dart';
 
-  DateTime date = DateTime.now();
+  // DateTime date = DateTime.now();
 
 Container addDate() {
     return Container(
@@ -31,14 +31,11 @@ Container addDate() {
               if (newDate == null) {
                 return;
               } else {
-                date = newDate;
-                // ignore: use_build_context_synchronously
-                Provider.of<AddTaskProvider>(context, listen: false)
-                    .changeDateValue(date);
+                value.date = newDate;
               }
             },
             child: Text(
-              'Date : ${date.year}/${date.month}/${date.day}',
+              'Date : ${value.date.year}/${value.date.month}/${value.date.day}',
               style: const TextStyle(
                   fontSize: 16,
                   //fontWeight: FontWeight.normal,

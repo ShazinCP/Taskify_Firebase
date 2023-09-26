@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:taskify/controller/addscreen_provider.dart';
-import 'package:taskify/controller/internet_connectivity_provider.dart';
 import 'package:taskify/helper/colors.dart';
 import 'package:taskify/view/add_screen/add_screen.dart';
 import 'package:taskify/view/edit_screen/edit_screen.dart';
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
         routes: {
             '/HomeScreen': (context) => const HomeScreen(),
             "/AddScreen": (context) => AddScreen(),
-            '/EditScreen': (context) => const EditScreen()
+            '/EditScreen': (context) => EditScreen()
           },
         debugShowCheckedModeBanner: false,
         title: 'Taskify',

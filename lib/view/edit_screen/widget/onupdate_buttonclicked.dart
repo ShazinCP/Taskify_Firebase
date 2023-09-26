@@ -4,25 +4,25 @@ import 'package:taskify/controller/addscreen_provider.dart';
 import 'package:taskify/helper/colors.dart';
 
 class OnUpdateButtonClicked extends StatelessWidget {
-   const OnUpdateButtonClicked({
-    super.key,
-    required this.taskProvider
-  });
+  const OnUpdateButtonClicked(
+      {super.key,
+      required this.taskProvider,
+      required this.formkey,
+      this.docId});
 
- 
+  final docId;
   final AddTaskProvider taskProvider;
-
+  final GlobalKey<FormState> formkey;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-         taskProvider.addTask();
-         taskProvider.taskController.clear();
-         taskProvider.categoryController.clear();
-           Navigator.pop(context);
-        },
-    
+        if (formkey.currentState!.validate()) {
+          taskProvider.updateTask(docId);
+          Navigator.pop(context);
+        }
+      },
       child: Container(
         height: 60,
         width: 120,

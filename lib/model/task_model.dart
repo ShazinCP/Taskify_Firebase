@@ -16,7 +16,7 @@ class TaskModel {
   factory TaskModel.fromMap(Map<String, dynamic> map, String id) {
     // Use toDate() to convert Timestamp to DateTime
     DateTime? dateTime = map['date']?.toDate();
-    
+
     return TaskModel(
       id: id,
       task: map['task'] ?? '',
@@ -29,8 +29,8 @@ class TaskModel {
     return {
       'task': task,
       'category': category,
-      // If you need to convert DateTime back to Timestamp when saving to Firestore, use the following:
-      'date': date != null ? Timestamp.fromDate(date!) : null,
+      // Extract only the date part and convert it to Timestamp
+      'date': date != null ? Timestamp.fromDate(DateTime(date!.year, date!.month, date!.day)) : null,
     };
   }
 }
