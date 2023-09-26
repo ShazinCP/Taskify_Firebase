@@ -20,6 +20,8 @@ class OnUpdateButtonClicked extends StatelessWidget {
       onTap: () {
         if (formkey.currentState!.validate()) {
           taskProvider.updateTask(docId);
+            taskProvider.categoryController.clear();
+          taskProvider.taskController.clear();
           Navigator.pop(context);
         }
       },
@@ -43,7 +45,7 @@ class OnUpdateButtonClicked extends StatelessWidget {
         child: const Text(
           "Update",
           style: TextStyle(
-            fontSize: 19,
+            fontSize: 16,
             fontWeight: FontWeight.w600,
             color: cBlackColor,
           ),

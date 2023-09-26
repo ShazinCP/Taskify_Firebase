@@ -8,14 +8,14 @@ Container floatingActionButtonWidget(BuildContext context) {
       boxShadow: [
         BoxShadow(
           color: Colors.white.withOpacity(0.5),
-          spreadRadius: 4,
-          blurRadius: 6,
+          spreadRadius: 2,
+          blurRadius: 4,
           offset: const Offset(0, 3),
         ),
       ],
     ),
     child: Transform.scale(
-      scale: 1.3,
+      scale: 1.1,
       child: FloatingActionButton(
         backgroundColor: appbarColor,
         onPressed: () {

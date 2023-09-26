@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                   "Pending Tasks",
                   style: TextStyle(
                     color: cWhiteColor,
-                    fontSize: 24,
+                    fontSize: 22,
                     fontWeight: FontWeight.w600,
                     shadows: [
                       Shadow(
@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                   icon: const Icon(
                     Icons.format_list_bulleted_rounded,
                     color: cWhiteColor,
-                    size: 28,
+                    size: 26,
                   ),
                 )
               ],

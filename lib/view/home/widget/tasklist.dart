@@ -27,17 +27,17 @@ class TaskList extends StatelessWidget {
           return ListView.builder(
             itemCount: value.tasks.length,
             itemBuilder: (context, index) {
-             final TaskModel toDoTask = value.tasks.reversed.toList()[index];
+              final TaskModel toDoTask = value.tasks.reversed.toList()[index];
               return Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
-                  height: size.height * 0.1,
+                  height: size.height / 14,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: backgroundColor,
+                    color: appbarColor,
                     boxShadow: const [
                       BoxShadow(
-                          color: cWhiteColor, blurRadius: 2, spreadRadius: 2)
+                          color: cWhiteColor, blurRadius: 1, spreadRadius: 1)
                     ],
                   ),
                   child: Row(
@@ -46,14 +46,14 @@ class TaskList extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: CircleAvatar(
-                          backgroundColor: appbarColor,
+                          backgroundColor: backgroundColor,
                           radius: 30,
                           child: Text(
                             toDoTask.category.toString().capitalize(),
                             style: const TextStyle(
                               color: cWhiteColor,
                               fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                              fontSize: 13,
                               shadows: [
                                 Shadow(
                                   color: Colors.black,
@@ -73,13 +73,14 @@ class TaskList extends StatelessWidget {
                             style: const TextStyle(
                                 color: cBlackColor,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 21),
+                                fontSize: 16),
                           ),
                           Text(
                             toDoTask.date.toString(),
                             style: const TextStyle(
                                 color: cBlackColor,
-                                fontWeight: FontWeight.bold),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 10),
                           )
                         ],
                       ),
