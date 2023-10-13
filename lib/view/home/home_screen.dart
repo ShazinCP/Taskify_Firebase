@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.3),
+                color: cBlackWithOpacity,
                 spreadRadius: 3,
                 blurRadius: 5,
                 offset: const Offset(0, 2),
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
               child: Text(
                 "To Do",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: cWhiteColor,
                     fontFamily: "f",
                     fontSize: 25,
                     fontWeight: FontWeight.w600),
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     shadows: [
                       Shadow(
-                        color: Colors.black,
+                        color: cBlackColor,
                         offset: Offset(2, 2),
                         blurRadius: 3,
                       ),

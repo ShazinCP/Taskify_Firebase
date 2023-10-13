@@ -56,7 +56,7 @@ class TaskList extends StatelessWidget {
                               fontSize: 13,
                               shadows: [
                                 Shadow(
-                                  color: Colors.black,
+                                  color: cBlackColor,
                                   offset: Offset(1.5, 1.5),
                                   blurRadius: 2,
                                 ),
