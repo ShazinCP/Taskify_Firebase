@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
             height: 230,
             width: double.infinity,
             child: Image.asset(
-                "lib/assets/todo-task-list-check-time-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg"),
+                "assets/todo-task-list-check-time-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg"),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),

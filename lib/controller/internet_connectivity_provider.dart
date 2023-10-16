@@ -1,21 +1,21 @@
-// import 'dart:async';
-// import 'package:flutter/cupertino.dart';
-// import 'package:taskify/services/internet/internet_connectivity_services.dart';
+import 'dart:async';
+import 'package:flutter/cupertino.dart';
+import 'package:taskify/services/internet/internet_connectivity_services.dart';
 
-// class InternetConnectivityProvider extends ChangeNotifier {
-//   late StreamSubscription subscription;
-//   var isDeviceConnected = false;
-//   bool isAlertSet = false;
+class InternetConnectivityProvider extends ChangeNotifier {
+  late StreamSubscription subscription;
+  var isDeviceConnected = false;
+  bool isAlertSet = false;
 
-//   final InternetConnectivityServices _connectivityServices =
-//       InternetConnectivityServices();
+  final InternetConnectivityServices _connectivityServices =
+      InternetConnectivityServices();
 
-//   Future getInternetConnectivity(BuildContext context) async {
-//     _connectivityServices.getConnectivity(context);
-//     isDeviceConnected = _connectivityServices.isDeviceConnected;
-//     isAlertSet = _connectivityServices.isAlertSet;
-//     subscription = _connectivityServices.subscription;
-//   }
+  Future getInternetConnectivity(BuildContext context) async {
+    _connectivityServices.getConnectivity(context);
+    isDeviceConnected = _connectivityServices.isDeviceConnected;
+    isAlertSet = _connectivityServices.isAlertSet;
+    subscription = _connectivityServices.subscription;
+  }
 
-//   notifyListeners();
-// }
+  notifyListeners();
+}

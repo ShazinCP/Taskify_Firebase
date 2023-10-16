@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:taskify/controller/addscreen_provider.dart';
+import 'package:taskify/controller/internet_connectivity_provider.dart';
 import 'package:taskify/helper/colors.dart';
 import 'package:taskify/model/task_model.dart';
 import 'package:taskify/view/widgets/uppercase.dart';
@@ -19,8 +20,8 @@ class TaskList extends StatelessWidget {
       child: Consumer<AddTaskProvider>(
         builder: (context, value, child) {
           if (value.tasks.isEmpty) {
-            // Provider.of<InternetConnectivityProvider>(context, listen: false)
-            //     .getInternetConnectivity(context);
+            Provider.of<InternetConnectivityProvider>(context, listen: false)
+                .getInternetConnectivity(context);
             value.fetchTasks();
             return const Center(child: Text('No Data Found'));
           }
