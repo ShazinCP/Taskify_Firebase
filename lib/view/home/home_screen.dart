@@ -47,12 +47,12 @@ class HomeScreen extends StatelessWidget {
             child: Image.asset(
                 "assets/todo-task-list-check-time-flat-line-filled-icon-beautiful-logo-button-over-yellow-background-for-ui-and-ux-website-or-mobile-application-free-vector.jpg"),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   "Pending Tasks",
                   style: TextStyle(
                     color: cWhiteColor,
@@ -67,14 +67,11 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.format_list_bulleted_rounded,
-                    color: cWhiteColor,
-                    size: 26,
-                  ),
-                )
+                Icon(
+                  Icons.format_list_bulleted_rounded,
+                  color: cWhiteColor,
+                  size: 26,
+                ),
               ],
             ),
           ),

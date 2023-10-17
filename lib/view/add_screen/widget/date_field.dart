@@ -31,7 +31,7 @@ Container addDate() {
               if (newDate == null) {
                 return;
               } else {
-                value.date = newDate;
+                value.changeDateValue(newDate);
               }
             },
             child: Text(

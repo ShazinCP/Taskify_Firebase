@@ -26,7 +26,7 @@ class TaskList extends StatelessWidget {
             return const Center(child: Text('No Data Found'));
           }
           return ListView.builder(
-            itemCount: value.tasks.length,
+                        itemCount: value.tasks.length,
             itemBuilder: (context, index) {
               final TaskModel toDoTask = value.tasks.reversed.toList()[index];
               return Padding(
